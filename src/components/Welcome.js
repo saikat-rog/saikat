@@ -4,7 +4,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Welcome = () => {
   const homeDescription =
-    " Hello I’m from Kolkata and I have been pursuing Computer Science Engineering. I am skilled in Flutter for cross platform development and efficient on React and Tailwind.";
+    "I’m from Kolkata and I have been pursuing Computer Science Engineering. I am skilled in Flutter for cross platform development and efficient on React and Tailwind.";
   
     const emailAddress = "saikat.rog@gmail.com";
   const handleEmailClick = () => {
