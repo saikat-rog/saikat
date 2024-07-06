@@ -33,7 +33,7 @@ const Services = () => {
     <div className=" w-full min-h-screen bg-deepdark text-white p-10 md:pl-28 md:pr-28">
       <div className=" flex flex-col md:flex-row justify-between">
         <div className="text-2xl md:text-4xl font-inter font-semibold">
-          2+ years <br />
+          <span className=" text-primarygreen">5+ years</span> <br />
           on Software Development
         </div>
         <div className=" flex flex-col pt-5 md:pt-0">
