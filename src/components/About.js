@@ -57,6 +57,7 @@ const About = () => {
         <div className=" hidden md:flex flex-auto justify-center">
           <img
             src={saikatdasimage}
+            alt="saikatdas"
             className="w-96 h-96 rounded-full object-cover"
           ></img>
         </div>
