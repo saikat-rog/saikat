@@ -9,23 +9,23 @@ const Services = () => {
     {
       id: 1,
       icon: faCode,
-      title: "Frontend Development",
+      title: "Full Stack Development",
       description:
-        "Specialize in responsive and interactive front-end development. With a deep understanding of HTML, CSS, and JS.",
+        "Specialize in responsive and interactive front-end development with the React technology and backend, API integration using Node Js and Mongo DB for Database.",
     },
     {
       id: 2,
       icon: faMobile,
       title: "CrossPlatform Development",
       description:
-        "Specialize in responsive and interactive front-end development. With a deep understanding of HTML, CSS, and JS.",
+        "Specialized in interactive development with the Flutter technology with single code base in Dart language and Firebase Firestore for database.",
     },
     {
       id: 3,
       icon: faCode,
-      title: "Frontend Development",
+      title: "API Integration",
       description:
-        "Specialize in responsive and interactive front-end development. With a deep understanding of HTML, CSS, and JS.",
+        "Special API integration for client's projects.",
     },
   ];
 
