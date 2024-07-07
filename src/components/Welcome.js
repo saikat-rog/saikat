@@ -3,39 +3,39 @@ import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
+const emailAddress = "saikat.rog@gmail.com";
+export const handleEmailClick = () => {
+  window.location.href = `mailto:${emailAddress}`;
+};
+
+const downloadResume = async () => {
+  try {
+    const response = await Axios.get(
+      "https://saikatbackend.vercel.app/api/downloadResume",
+      {
+        responseType: "blob",
+      }
+    );
+    // Create a URL from the Blob
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "resume.pdf"); // or any other extension
+    // Append the link to the body
+    document.body.appendChild(link);
+    // Programmatically click the link to trigger the download
+    link.click();
+    // Remove the link from the document
+    link.parentNode.removeChild(link);
+  } catch (error) {
+    console.error("Error in downloading resume,", error);
+  }
+};
+
 const Welcome = () => {
   const homeDescription =
     "I’m from Kolkata and I have been pursuing Computer Science Engineering. I am skilled in Flutter for cross platform development and efficient on React and Tailwind frontend framework and Node js for backend and Mongo DB for the Database.";
-
-  const emailAddress = "saikat.rog@gmail.com";
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${emailAddress}`;
-  };
-
-  const downloadResume = async () => {
-    try {
-      const response = await Axios.get(
-        "https://saikatbackend.vercel.app/api/downloadResume",
-        {
-          responseType: "blob", // This is important to handle binary data
-        }
-      );
-      // Create a URL from the Blob
-      const url = window.URL.createObjectURL(new Blob([response.data]));
-      // Create a link element
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", "resume.pdf"); // or any other extension
-      // Append the link to the body
-      document.body.appendChild(link);
-      // Programmatically click the link to trigger the download
-      link.click();
-      // Remove the link from the document
-      link.parentNode.removeChild(link);
-    } catch (error) {
-      console.error("Error in downloading resume,", error);
-    }
-  };
 
   return (
     <div className="p-10 md:p-28 flex flex-col justify-center items-start h-screen w-full bg-deepdark">
