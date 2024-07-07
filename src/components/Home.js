@@ -4,7 +4,7 @@ import Welcome from "./Welcome";
 
 const Home = () => {
   return (
-    <div>
+    <div className=' w-full'>
       <Welcome />
       <Services/>
     </div>
