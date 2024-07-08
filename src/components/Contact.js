@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { handleEmailClick } from "./Welcome";
 import Axios from 'axios';
 import SuccessDialog from "./SuccessDialog";
+import { Helmet } from "react-helmet";
+
 
 const Contact = () => {
   // isSubmitted state
@@ -59,6 +61,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen w-full bg-deepdark pl-10 pr-10 pt-28 md:p-28 grid grid-cols-1 md:grid-cols-2 gap-10 font-inter">
+      <Helmet><title>Contact</title></Helmet>
       {/* Contact text */}
       <div className=" flex flex-col gap-10 items-start">
         {/* Contact heading */}

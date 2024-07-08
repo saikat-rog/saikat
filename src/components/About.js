@@ -1,11 +1,13 @@
 import React from "react";
 import saikatdasimage from "../assets/saikatdas.jpg";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const university = " University of Engineering & Management";
 
   return (
     <div className="min-h-screen bg-deepdark pr-10 pl-10 pt-28 md:pl-28 font-inter">
+      <Helmet><title>About</title></Helmet>
       {/* About Summary */}
       <div className=" md:grid grid-cols-2">
         {/* About */}

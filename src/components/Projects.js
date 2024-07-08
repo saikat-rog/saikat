@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -31,6 +32,7 @@ const Projects = () => {
 
   return (
     <div className="w-full min-h-screen bg-deepdark text-white pl-10 pr-10 pt-16 pb-10 md:pt-28 md:pl-28 md:pr-28">
+      <Helmet><title>Projects</title></Helmet>
       <div className="text-5xl md:text-6xl font-inter font-semibold text-primarygreen flex flex-col items-center">
         {projectsText}
       </div>
