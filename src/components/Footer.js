@@ -28,15 +28,14 @@ const Footer = () => {
             {/* Information */}
             <div className="flex flex-col gap-2 text-grey">
               <h3 className="text-white">Information</h3>
-              <h3>Phone: +91 83340 66167</h3>
               <h3>Email: saikat.rog@gmail.com</h3>
-              <h3>Address: Kolkata</h3>
+              <h3>Address: Kolkata, India</h3>
             </div>
             {/* Social Media */}
             <div className="flex flex-col gap-2 text-grey">
               <h3 className="text-white">Social Media</h3>
-              <h3>Github</h3>
-              <h3>Linkedin</h3>
+              <a href="https://github.com/saikat-rog">Github</a>
+              <a href="https://linkedin.com/in/thissaikat">Linkedin</a>
             </div>
           </div>
         </div>
