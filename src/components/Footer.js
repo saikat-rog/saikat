@@ -34,8 +34,8 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex flex-col gap-2 text-grey">
               <h3 className="text-white">Social Media</h3>
-              <a href="https://github.com/saikat-rog">Github</a>
-              <a href="https://linkedin.com/in/thissaikat">Linkedin</a>
+              <a href="https://github.com/saikat-rog" target="blank">Github</a>
+              <a href="https://linkedin.com/in/thissaikat" target="blank">Linkedin</a>
             </div>
           </div>
         </div>
