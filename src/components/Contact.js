@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { handleEmailClick } from "./Welcome";
 import Axios from 'axios';
+import SuccessDialog from "./SuccessDialog";
 
 const Contact = () => {
+  // isSubmitted state
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  // isSending state
+  const [isSending, setIsSending] = useState(false);
+  // showDialog state
+  const [showDialog, setShowDialog] = useState(false);
   // formdata state
   const [formData, setFormData] = useState({
     name: "",
@@ -21,9 +28,16 @@ const Contact = () => {
     });
   };
 
+  //Close Dialog
+  const closeDialog = () =>{
+    setShowDialog(false);
+  }
+
   // Handles Submit Button behaviour
   const handleSubmit = async (e) =>{
     e.preventDefault();
+    setIsSending(true);
+    setShowDialog(true);
     try {
       const response = await Axios.post(
         "https://saikatbackend.vercel.app/api/submitContactForm",
@@ -34,12 +48,13 @@ const Contact = () => {
           }
         }
       );
-      alert("Form Submitted");
+      setIsSubmitted(true);
   
       console.log(response.data); // Log response data
     } catch (error) {
       console.error('Error:', error); // Handle error
     }
+    setIsSending(false);
   }
 
   return (
@@ -93,7 +108,6 @@ const Contact = () => {
               Your Email
             </label>
             <input
-              type="email"
               id="email"
               name="email"
               className="w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:border-primarygreen bg-deepdark text-grey"
@@ -124,6 +138,7 @@ const Contact = () => {
           >
             Send Message
           </button>
+          {showDialog && <SuccessDialog isSubmitted={isSubmitted} isSending={isSending} onClose={closeDialog}/>}
         </form>
       </div>
     </div>
